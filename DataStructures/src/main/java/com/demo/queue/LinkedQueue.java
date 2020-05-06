@@ -63,6 +63,7 @@ public class LinkedQueue<T> implements Queue<T> {
      * @date 2020/3/19 22:39
      * @author liuc
      **/
+    @Override
     public void clear() {
         //将front、rear两个节点赋为null
         front = null;
@@ -77,6 +78,7 @@ public class LinkedQueue<T> implements Queue<T> {
      * @date 2020/3/19 22:38
      * @author liuc
      **/
+    @Override
     public boolean isEmpty() {
         return front == rear;
     }
@@ -88,6 +90,7 @@ public class LinkedQueue<T> implements Queue<T> {
      * @date 2020/3/19 22:38
      * @author liuc
      **/
+    @Override
     public boolean isFull() {
         return nItems == maxSize;
     }
@@ -99,6 +102,7 @@ public class LinkedQueue<T> implements Queue<T> {
      * @date 2020/3/19 22:38
      * @author liuc
      **/
+    @Override
     public int size() {
         return nItems;
     }
@@ -111,6 +115,7 @@ public class LinkedQueue<T> implements Queue<T> {
      * @date 2020/3/19 22:37
      * @author liuc
      **/
+    @Override
     public void push(T element) {
         //如果该链队列还是空链队列
         if (front == null) {
@@ -161,6 +166,7 @@ public class LinkedQueue<T> implements Queue<T> {
      * @date 2020/3/19 22:35
      * @author liuc
      **/
+    @Override
     public Object pop() {
         return null;
     }
@@ -172,6 +178,7 @@ public class LinkedQueue<T> implements Queue<T> {
      * @date 2020/3/19 22:35
      * @author liuc
      **/
+    @Override
     public Object front() {
         return rear.data;
     }
@@ -183,7 +190,8 @@ public class LinkedQueue<T> implements Queue<T> {
      * @date 2020/3/19 22:34
      * @author liuc
      **/
-    public void display() {
+    @Override
+    public void ddisplay() {
         for (Node current = front.next; current != null; current = current.next) {
             System.out.println(current.data);
         }

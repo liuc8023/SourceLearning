@@ -14,7 +14,9 @@ public class SingleLinkedList {
      * 先初始化一个头节点，头节点不能动,也不存放数据
      */
     private static Node head = new Node(0, null,null);
-    //返回头节点
+    /*
+     * 返回头节点
+     */
     public static Node getHead() {
         return head;
     }

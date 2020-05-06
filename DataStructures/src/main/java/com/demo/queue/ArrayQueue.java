@@ -49,6 +49,7 @@ public class ArrayQueue<T> implements Queue<T>{
      * @date 2020/3/20 14:28
      * @author liuc
      **/
+    @Override
     public void clear() {
         front = rear = 0;
     }
@@ -61,6 +62,7 @@ public class ArrayQueue<T> implements Queue<T>{
      * @date 2020/3/20 14:28
      * @author liuc
      **/
+    @Override
     public boolean isEmpty() {
         return rear == front;
     }
@@ -73,6 +75,7 @@ public class ArrayQueue<T> implements Queue<T>{
      * @date 2020/3/20 14:28
      * @author liuc
      **/
+    @Override
     public boolean isFull() {
         return rear == maxSize;
     }
@@ -85,6 +88,7 @@ public class ArrayQueue<T> implements Queue<T>{
      * @date 2020/3/20 14:28
      * @author liuc
      **/
+    @Override
     public int size() {
         return rear - front;
     }
@@ -97,6 +101,7 @@ public class ArrayQueue<T> implements Queue<T>{
      * @date 2020/3/20 14:28
      * @author liuc
      **/
+    @Override
     public void push(T t) {
         // 判断队列是否满
         if (isFull()) {
@@ -114,6 +119,7 @@ public class ArrayQueue<T> implements Queue<T>{
      * @date 2020/3/20 14:28
      * @author liuc
      **/
+    @Override
     public T pop() {
         if (isEmpty()) {
             throw new RuntimeException("队列为空!");
@@ -132,6 +138,7 @@ public class ArrayQueue<T> implements Queue<T>{
      * @date 2020/3/20 14:28
      * @author liuc
      **/
+    @Override
     public T front() {
         if (isEmpty()) {
             throw new RuntimeException("队列为空!");
@@ -146,6 +153,7 @@ public class ArrayQueue<T> implements Queue<T>{
      * @date 2020/3/20 14:28
      * @author liuc
      **/
+    @Override
     public void display() {
         int i = front;
         while (i < rear) {
