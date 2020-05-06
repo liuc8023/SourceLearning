@@ -191,7 +191,7 @@ public class LinkedQueue<T> implements Queue<T> {
      * @author liuc
      **/
     @Override
-    public void ddisplay() {
+    public void display() {
         for (Node current = front.next; current != null; current = current.next) {
             System.out.println(current.data);
         }
